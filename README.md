@@ -1,6 +1,6 @@
 # digest-stream
 
-Simple pass-through stream (RW) which calculates the a crypto digest (sha/md5 hash) of a stream and also the length. Pipe your stream through this to get digest and length.
+Simple node.js pass-through stream (RW) which calculates the a crypto digest (sha/md5 hash) of a stream and also the length. Pipe your stream through this to get digest and length.
 
 [![Build Status](https://secure.travis-ci.org/jeffbski/digest-stream.png?branch=master)](http://travis-ci.org/jeffbski/digest-stream)
 
