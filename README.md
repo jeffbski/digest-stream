@@ -13,7 +13,7 @@ npm install digest-stream
 
 ## Usage
 
-Provide a the digest algorithm, digest encoding, and a listener function when you construct the stream. The listener will be called with the resultant digest and length of the stream just prior to end being emitted.
+Provide a the digest algorithm, optional input encoding, digest encoding, and a listener function when you construct the stream. The listener will be called with the resultant digest and length of the stream just prior to end being emitted.
 
 Since this uses the node.js crypto package, refer to http://nodejs.org/api/crypto.html for the specific options available.
 
