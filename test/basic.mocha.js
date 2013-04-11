@@ -28,7 +28,7 @@ test('basic use string, results with digest and length being provided to listene
     .on('error', function (err) { done(err); })
     .on('data', function (data) { accumData.push(data); })
     .on('end', function () {
-      t.deepEqual(accumData, ['abc', 'def', 'ghi']);
+      t.deepEqual(Buffer.concat(accumData).toString(), 'abcdefghi');
       t.equal(resultDigest, EXPECTED_SHA1_HEX);
       t.equal(resultantLength, 9);
       done();
@@ -109,7 +109,7 @@ test('basic use string with inputEncoding utf8, results with listenerFn(digest, 
     .on('error', function (err) { done(err); })
     .on('data', function (data) { accumData.push(data); })
     .on('end', function () {
-      t.deepEqual(accumData, ['abc', 'def', 'ghi']);
+      t.deepEqual(Buffer.concat(accumData).toString(), 'abcdefghi');
       t.equal(resultDigest, EXPECTED_SHA1_HEX);
       t.equal(resultantLength, 9);
       done();

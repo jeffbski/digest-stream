@@ -17,7 +17,8 @@ Provide a the digest algorithm, optional input encoding, digest encoding, and a 
 
 Since this uses the node.js crypto package, refer to http://nodejs.org/api/crypto.html for the specific options available.
 
- - `digestStream(algorithm, [inputEncoding,] digestEncoding, listenerFn)` - constructs a new stream instance, the listenerFn will be called prior to the `end` event being emitted. `inputEncoding` is optional and defaults to `binary` if not provided.
+ - `digestStream(algorithm, [inputEncoding,] digestEncoding, [options], listenerFn)` - constructs a new stream instance, the listenerFn will be called prior to the `end` event being emitted. `inputEncoding` is optional and defaults to `binary` if not provided.
+ - `options` - optional streams options
  - `listenerFn` function signature is `fn(digest, dataLength)` - `digest` is the digest for the stream data in the digest encoding format specified when instance was created. `dataLength` is the length of the data in the stream (provided for convenience).
 
 ```javascript
@@ -38,6 +39,7 @@ readstream
 
  - Easy to use pass-through stream which calculates the digest and length of string or Buffer streamlength of the string
  - Builds on pass-stream to have all the normal pass-through functionality for a spec compliant stream
+ - works with node 0.10+ streams2 but is also compatible with 0.8
 
 ## Why
 
