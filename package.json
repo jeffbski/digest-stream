@@ -1,6 +1,6 @@
 {
   "name": "digest-stream",
-  "description": "digest-stream - Simple pass-through stream (RW) which calculates the a crypto digest (sha/md5 hash) of a stream and also the length. Pipe your stream through this to get digest and length.",
+  "description": "digest-stream - Simple pass-through stream (RW) which calculates the a crypto digest (sha/md5 hash) of a stream and also the length. Pipe your stream through this to get digest and length. (streams2)",
   "version": "0.2.0",
   "author": "Jeff Barczewski <jeff.barczewski@gmail.com>",
   "repository": { "type": "git", "url": "http://github.com/jeffbski/digest-stream.git" },
