@@ -44,6 +44,11 @@ readstream
 ## Why
 
 By making this simple pass-through stream which calculates the digest and length of a stream, it becomes really easy to add this functionality to a streaming workflow, just by piping it through this stream, the digest and length will be available prior to `end` being fired.
+
+## Changes
+
+ - v1.0.0 - listenerFn can return an instance of Error and it will be signaled to the stream
+
 ## Get involved
 
 If you have input or ideas or would like to get involved, you may:
