@@ -19,7 +19,7 @@ Since this uses the node.js crypto package, refer to http://nodejs.org/api/crypt
 
  - `digestStream(algorithm, [inputEncoding,] digestEncoding, [options], listenerFn)` - constructs a new stream instance, the listenerFn will be called prior to the `end` event being emitted. `inputEncoding` is optional and defaults to `binary` if not provided.
  - `options` - optional streams options
- - `listenerFn` function signature is `fn(digest, dataLength)` - `digest` is the digest for the stream data in the digest encoding format specified when instance was created. `dataLength` is the length of the data in the stream (provided for convenience).
+ - `listenerFn` function signature is `fn(digest, dataLength)` - `digest` is the digest for the stream data in the digest encoding format specified when instance was created. `dataLength` is the length of the data in the stream (provided for convenience). If listenerFn returns an object that is an instance of Error, then the error will be signaled in the stream.
 
 ```javascript
 var digestStream = require('digest-stream');
@@ -55,4 +55,3 @@ If you have input or ideas or would like to get involved, you may:
 ## License
 
  - [MIT license](http://github.com/jeffbski/digest-stream/raw/master/LICENSE)
-

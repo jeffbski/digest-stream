@@ -148,3 +148,25 @@ test('listenerFn not a function, throws error', function () {
   }
   t.throws(throwsErr, /listenerFn needs to be a function/);
 });
+
+test('listenerFn returns an error', function (done) {
+  function listenerFn(digest, length) {
+    // pretend was an invalid digest so signalling error
+    var err = new Error('foo');
+    err.foo = true;
+    return err;
+  }
+  var ls = digestStream('sha1', 'hex', listenerFn);
+  var stream = passStream();
+  stream
+    .pipe(ls)
+    .on('error', function (err) {
+      t.equal(err.foo, true, 'should have an error');
+      done();
+    });
+  process.nextTick(function () {
+    stream.write('abc');
+    stream.write('def');
+    stream.end('ghi');
+  });
+});
