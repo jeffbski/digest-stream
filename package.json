@@ -1,13 +1,25 @@
 {
   "name": "digest-stream",
   "description": "digest-stream - Simple pass-through stream (RW) which calculates the a crypto digest (sha/md5 hash) of a stream and also the length. Pipe your stream through this to get digest and length. (streams2)",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "author": "Jeff Barczewski <jeff.barczewski@gmail.com>",
-  "repository": { "type": "git", "url": "http://github.com/jeffbski/digest-stream.git" },
-  "bugs" : { "url": "http://github.com/jeffbski/digest-stream/issues" },
-  "licenses": [{ "type": "MIT", "url" : "http://github.com/jeffbski/digest-stream/raw/master/LICENSE" }],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jeffbski/digest-stream.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jeffbski/digest-stream/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/jeffbski/digest-stream/raw/master/LICENSE"
+    }
+  ],
   "main": "lib/digest-stream",
-  "engines": { "node": ">=0.8" },
+  "engines": {
+    "node": ">=0.8"
+  },
   "dependencies": {
     "pass-stream": "~0.1.3"
   },
